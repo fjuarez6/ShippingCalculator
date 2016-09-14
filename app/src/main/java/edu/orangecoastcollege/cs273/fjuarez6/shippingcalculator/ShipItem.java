@@ -23,8 +23,17 @@ public class ShipItem {
 
     public void setWeight(double weight) {
         mWeight = weight;
-        mAddedCost = ((weight - 16) / 4) * (.50);
-        mTotalCoast = mBaseCost + mAddedCost;
+
+        if (weight < 16) {
+
+            mTotalCoast = mBaseCost;
+        }
+        else {
+
+            mAddedCost = ((weight - 16) / 4) * (.50);
+            mTotalCoast = mBaseCost + mAddedCost;
+        }
+
     }
 
     public double getBaseCost() {

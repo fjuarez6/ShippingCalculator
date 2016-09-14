@@ -15,10 +15,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/Title"
         android:id="@+id/titleTextView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/titleText"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,22 +26,13 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/weightEditText"
-        android:layout_alignTop="@+id/weightTextView"
-        android:layout_alignLeft="@+id/titleTextView"
-        android:layout_alignStart="@+id/titleTextView"
         android:singleLine="false"
         android:selectAllOnFocus="true"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/weightTextView"
+        android:layout_marginTop="33dp"
         android:layout_below="@+id/titleTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"/>
+        android:layout_alignRight="@+id/titleTextView"
+        android:layout_alignEnd="@+id/titleTextView"
+        android:gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
