@@ -9,7 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="edu.orangecoastcollege.cs273.fjuarez6.shippingcalculator.MainActivity"
-    android:id="@+id/shippingRelativeLayout">
+    android:id="@+id/shippingRelativeLayout"
+    android:background="@drawable/shipping_background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,8 +18,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/titleTextView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/titleText"/>
+        android:text="@string/titleText"
+        android:layout_alignRight="@+id/weightEditText"
+        android:layout_alignEnd="@+id/weightEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -28,11 +34,11 @@
         android:id="@+id/weightEditText"
         android:singleLine="false"
         android:selectAllOnFocus="true"
-        android:layout_marginTop="33dp"
+        android:gravity="center"
+        android:textSize="40sp"
         android:layout_below="@+id/titleTextView"
-        android:layout_alignRight="@+id/titleTextView"
-        android:layout_alignEnd="@+id/titleTextView"
-        android:gravity="center"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,12 +46,12 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/baseText"
         android:id="@+id/baseTextView"
-        android:layout_below="@+id/weightEditText"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/metrcTextView"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="44dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="78dp"/>
+        android:layout_alignParentStart="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,22 +87,22 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/baseAmountTextView"
-        android:text="0"
-        android:layout_alignTop="@+id/baseTextView"
+        android:layout_marginRight="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_above="@+id/addesdTextView"
         android:layout_alignRight="@+id/weightEditText"
         android:layout_alignEnd="@+id/weightEditText"
-        android:layout_marginRight="18dp"
-        android:layout_marginEnd="18dp"/>
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/addedAmountTextView"
-        android:layout_alignTop="@+id/addesdTextView"
-        android:layout_alignLeft="@+id/baseAmountTextView"
-        android:layout_alignStart="@+id/baseAmountTextView"
-        android:text="0"/>
+        android:layout_below="@+id/baseAmountTextView"
+        android:layout_alignRight="@+id/baseAmountTextView"
+        android:layout_alignEnd="@+id/baseAmountTextView"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -107,6 +113,6 @@
         android:layout_alignBottom="@+id/totalTextView"
         android:layout_alignLeft="@+id/addedAmountTextView"
         android:layout_alignStart="@+id/addedAmountTextView"
-        android:text="0"/>
+        android:textIsSelectable="false"/>
 
 </RelativeLayout>
